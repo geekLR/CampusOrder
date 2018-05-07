@@ -18,8 +18,8 @@ public class LoginService {
     public JsonResult studentLogin(String student_account,String pwd){
         System.out.println(student_account);
         Student student =loginDao.getStudentByAccount(student_account);
-        System.out.println(student.getStudent_pwd());
-//        System.out.println(studentLogin.toString());
+//        System.out.println(student.getStudent_pwd());
+//        System.out.println(studentLogin.toString());---不存在用户则会出错
         if (student!=null){
             System.out.println(student.toString());
             System.out.println(student.getStudent_birthday());
